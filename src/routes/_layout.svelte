@@ -1,22 +1,22 @@
 <script>
-	import Nav from '../components/Nav.svelte';
+	import Header from '../components/Header.svelte';
+	import Filter from '../components/Filter.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	export let segment;
 </script>
 
 <style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
 </style>
 
-<Nav {segment}/>
+<ul grid gap="8" id="postlook" p="8">
+	<Header {segment}/>
 
-<main>
-	<slot></slot>
-</main>
+	<Filter/>
+
+	<main>
+		<slot></slot>
+	</main>
+
+	<Footer/>
+</ul>
