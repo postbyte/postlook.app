@@ -1,0 +1,5 @@
+type contact {
+  name: String!
+  email: String!
+  message: String!
+}
